@@ -1466,9 +1466,45 @@ section:nth-child(even) {
         height: 220px;
     }
     
+    /* Ajustes Seção About 1024px */
+    .about-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-image-col {
+        order: -1 !important; /* Força a imagem a ficar no topo de tudo dentro da row */
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .about-content-col {
+        order: 1 !important; /* Conteúdo (texto, stats, botão) vem logo após a imagem */
+        width: 100%;
+    }
+
     .about-stats {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Experiência e Clientes lado a lado */
         gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .stat-full {
+        grid-column: span 2; /* Satisfação 100% ocupando a largura total abaixo */
+    }
+
+    .about-btn-wrapper {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .about-btn-wrapper .btn {
+        margin-top: 0 !important;
     }
     
     .location-wrapper {
